@@ -4,4 +4,5 @@ for i in range(97, 123):
         continue
     elif i == 113:
         continue
-print("{}".format(chr(i)), end="")
+    else:
+        print("{}".format(chr(i)), end="")
