@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def print_last_digit(number):
     if number < 0:
-        opossite = number * -1
+        opposite = number * -1
         print(f"{opposite % 10}", end="")
         return opposite % 10
     elif number > 0:
