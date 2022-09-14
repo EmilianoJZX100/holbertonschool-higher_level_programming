@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    import hidden_4
+    from hidden_4 import *
+    list = dir()
 
-def vdir(hidden_4):
-    return(x for x in dir(hidden_4) if not x.startswith('__'))
-print(vdir(hidden_4))
+    for i in range(0, len(list)):
+        if list[i][:2] != "__":
+            print("{}".format(list[i]))
