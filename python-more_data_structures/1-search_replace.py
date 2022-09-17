@@ -1,3 +1,6 @@
 #!/usr/bin/python3
 def search_replace(my_list, search, replace):
-    return (my_list.translate({ord(i): replace for i in 'search'}))
+    for idx, item in enumerate(my_list):
+        if item == search:
+            my_list[idx] = replace
+    return my_list
