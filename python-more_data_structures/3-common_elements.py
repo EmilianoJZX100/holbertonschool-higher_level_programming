@@ -5,4 +5,4 @@ def common_elements(set_1, set_2):
     set_3 = []
 
     if s1 and s2:
-        return set_3
+        return set_3.append(s1 and s2)
