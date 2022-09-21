@@ -2,5 +2,5 @@
 class Square:
     pass
 
-s = Square()
+s = Square{}
 print(s)
