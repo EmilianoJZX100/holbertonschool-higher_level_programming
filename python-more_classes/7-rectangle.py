@@ -11,7 +11,7 @@ class Rectangle:
         Rectangle.number_of_instances += 1
         self.width = width
         self.height = height
-        self.print_symbol = '#'
+        self.print_symbol = '%f' or '%s' or '%d'
 
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
