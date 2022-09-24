@@ -14,7 +14,7 @@ class Rectangle:
             return ''
         else:
             for i in range(0, self.__height):
-                for j in range(0, self.__width):
+                for j in range(0, self.__width - 1):
                     print('#', end='')
                 print()
             return ('#' * self.__width)
