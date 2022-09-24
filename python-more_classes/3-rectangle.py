@@ -11,7 +11,7 @@ class Rectangle:
 
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
-            return ()
+            return ''
         else:
             for i in range(0, self.__height):
                 for j in range(0, self.__width):
