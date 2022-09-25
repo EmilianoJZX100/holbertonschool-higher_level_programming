@@ -17,14 +17,13 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ''
         else:
-            for i in range(0, self.__height - 1):
-                for j in range(0, self.__width):
-                    print('#', end='')
-                print()
-            return str('' * self.__width)
-
-    def print_symbol(self):
-        return self.print_symbol
+            string = ''
+            for i in range(self.__height):
+                if i > 0:
+                    string += '\n'
+                for j in range(self.__width):
+                    string += str(self.print_symbol)
+            return string
 
     def __repr__(self):
         return ('Rectangle({}, {})'.format(self.__width, self.__height))
