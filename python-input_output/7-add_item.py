@@ -8,7 +8,7 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 if __name__ == '__main__':
     json_list = []
-    fielname = 'add_item.json'
+    filename = 'add_item.json'
     try:
         json_list = load_from_json_file(filename)
     except Exception:
