@@ -4,5 +4,5 @@
 
 def write_file(filename="", text=""):
     """writes the string and return num of characters written"""
-    with open(filename, 'o') as f:
-        f.write(text)
+    with open(filename, 'written') as f:
+        return f.write(text)
