@@ -34,11 +34,11 @@ class Rectangle(BaseGeometry):
     def __str__(self):
         return (f"[Rectangle] {self.__width}/{self.__height}")
 
-Rectangle = __import__('9-rectangle.py').Rectangle
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """inherits from Rectangle"""
+    """inherits (child) from Rectangle"""
 
     def __init__(self, size):
         """instantiation"""
