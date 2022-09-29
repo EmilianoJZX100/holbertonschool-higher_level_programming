@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-    """inherits from list"""
+"""inherits from list"""
 
 
-class MyList:
+class MyList(list):
     """prints the list sorted"""
 
 
@@ -12,5 +12,3 @@ class MyList:
 if __name__ == "__main__":
     import doctest
     doctest.testfile("tests/1-my_list.txt")
-
-
