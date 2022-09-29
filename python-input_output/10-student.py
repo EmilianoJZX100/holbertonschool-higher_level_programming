@@ -14,7 +14,7 @@ class Student:
         student_dictionary = self.__dict__
         stds = {}
 
-        if attr is None:
+        if attrs is None:
             return student_dictionary
 
         if type(attrs) is list:
