@@ -20,5 +20,5 @@ class Student:
         if type(attrs) is list:
             for elements in attrs:
                 if hasattr(self, elements):
-                    stds{elements} = getattr(self, elements)
+                    stds[elements] = getattr(self, elements)
             return stds
