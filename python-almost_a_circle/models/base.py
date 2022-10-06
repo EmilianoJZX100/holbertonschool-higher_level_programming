@@ -2,7 +2,6 @@
 """base class"""
 
 
-
 class Base:
     """new class"""
 
