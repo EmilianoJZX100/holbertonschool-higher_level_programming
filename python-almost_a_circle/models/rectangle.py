@@ -17,40 +17,48 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """width"""
         self.__width = width
         return self.__width
 
     @property
     def height(self):
+        """height"""
         self.__height = height
         return self.__height
 
     @property
     def x(self):
+        """x"""
         self.__x = x
         return self.__x
 
     @property
     def y(self):
+        """y"""
         self.__y = y
         return self.__y
 
     @width.getter
     def width(self):
+        """width getter"""
         return self.__width
 
     @width.setter
     def width(self, width):
+        """width setter"""
         self.errors(width, "width")
         self.__width = width
         return self.__width
 
     @height.getter
     def height(self):
+        """height getter"""
         return self.__height
 
     @height.setter
     def height(self, height):
+        """height setter"""
         if type(height) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -59,20 +67,24 @@ class Rectangle(Base):
 
     @x.getter
     def x(self):
+        """x getter"""
         return self.__x
 
     @x.setter
     def x(self, value):
+        """x setter"""
         if value <= 0:
             raise ValueError("x must be > 0")
         self.__x = value
 
     @y.getter
     def y(self):
+        """y getter"""
         return self.__y
 
     @y.setter
     def y(self, value):
+        """y setter"""
         if value <= 0:
             raise ValueError("y must be > 0")
         self.__y = value
