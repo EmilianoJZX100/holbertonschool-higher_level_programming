@@ -76,7 +76,7 @@ class Rectangle(Base):
     def x(self, value):
         """x setter"""
         if value <= 0:
-            raise ValueError("x must be > 0")
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @y.getter
@@ -88,5 +88,5 @@ class Rectangle(Base):
     def y(self, value):
         """y setter"""
         if value <= 0:
-            raise ValueError("y must be > 0")
+            raise ValueError("y must be >= 0")
         self.__y = value
