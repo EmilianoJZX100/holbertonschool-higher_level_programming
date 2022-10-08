@@ -9,11 +9,25 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """class constructor"""
 
+        super().__init__(id)
         self.__width = width
         self.__height = height
         self.__x = x
         self.__y = y
-        super().__init__(id)
+
+    """type error message"""
+    def error_type(name, newvalue):
+        if type(newvalue)is not int:
+            raise TypeError(f"{name} must be an integer")
+
+    """value error messages"""
+    def error_value(name, newvalue2):
+        if newvalue2 < 0:
+            raise ValueError(f"{name} must be >= 0")
+
+    def error_value2(name, newvalue3):
+        if newvalue3 <= 0:
+            raise ValueError(f"{name} must be > 0")
 
     @property
     def width(self):
@@ -23,10 +37,8 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """width setter"""
-        if not isinstance(value, int):
-            raise TypeError("width must be an integer")
-        if value <= 0:
-            raise ValueError("width must be > 0")
+        self.error_type("width", value)
+        self.error_value2("width", value)
         self.__width = value
 
     @property
@@ -37,10 +49,8 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """height setter"""
-        if not isinstance(value, int):
-            raise TypeError("height must be an integer")
-        if value <= 0:
-            raise ValueError("height must be > 0")
+        self.error_type("height", value)
+        self.error_value2("height", value)
         self.__height = value
 
     @property
@@ -89,4 +99,4 @@ class Rectangle(Base):
         """rectangle"""
         string = '[Rectangle]' + f' ({self.id}) '
         string += f'{self.__x}/{self.__y} - {self.__width}/{self.__height}'
-        return string
+        return string        
