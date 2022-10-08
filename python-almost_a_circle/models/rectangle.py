@@ -68,6 +68,7 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """area of rectangle"""
         return self.height * self.width
 
     def display(self):
@@ -85,6 +86,7 @@ class Rectangle(Base):
                 print()
 
     def __str__(self):
+        """rectangle"""
         string = '[Rectangle]' + f' ({self.id}) '
         string += f'{self.__x}/{self.__y} - {self.__width}/{self.__height}'
         return string
