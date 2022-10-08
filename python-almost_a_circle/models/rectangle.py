@@ -69,3 +69,22 @@ class Rectangle(Base):
 
     def area(self):
         return self.height * self.width
+
+    def display(self):
+        """ print rectangle """
+        if self.__width == 0 or self.__height == 0:
+            print()
+        else:
+            for j in range(self.__y):
+                print()
+            for row in range(self.__height):
+                for j in range(self.__x):
+                    print(' ', end='')
+                for column in range(self.__width):
+                    print('#', end='')
+                print()
+
+    def __str__(self):
+        string = '[Rectangle]' + f' ({self.id}) '
+        string += f'{self.__x}/{self.__y} - {self.__width}/{self.__height}'
+        return string
