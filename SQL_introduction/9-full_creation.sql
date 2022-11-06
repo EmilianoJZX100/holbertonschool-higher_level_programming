@@ -14,7 +14,7 @@ INSERT INTO second_table (
 VALUES
 (
     "1",
-    "Jhon",
+    "John",
     "10"
 ),
 (
