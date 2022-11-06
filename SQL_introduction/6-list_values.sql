@@ -1,3 +1,4 @@
 -- show all rows of first_table
 
-SHOW COLUMNS FROM first_table IN hbtn_0c_0;
+USE hbtn_0c_0;
+SELECT * FROM first_table;
