@@ -18,4 +18,5 @@ if __name__ == "__main__":
     result = c.fetchall()
 
     for row in result:
-        print(row)
+        if row[1] == 'N':
+            print(row)
