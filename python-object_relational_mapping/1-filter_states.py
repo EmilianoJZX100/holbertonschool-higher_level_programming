@@ -13,9 +13,9 @@ if __name__ == "__main__":
         database=argv[3]
         )
 
-    cu = db.cursor()
-    cu.execute("SELECT * FROM states WHERE states LIKE 'N%' ORDER BY states.id ASC")
-    result = cu.fetchall()
+    c = db.cursor()
+    c.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id")
+    result = c.fetchall()
 
     for row in result:
         print(row)
