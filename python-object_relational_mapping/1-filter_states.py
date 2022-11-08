@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""script that lists all states with a name starting with N (upper N) from the database hbtn_0e_0_usa"""
+"""lists all states with a name starting with N from the database"""
 import MySQLdb
 from sys import argv
 
@@ -13,9 +13,9 @@ if __name__ == "__main__":
         database=argv[3]
         )
 
-    cursor = db.cursor()
-    cursor.execute("SELECT * FROM states WHERE name = 'N%' ORDER BY states.id ASC")
-    result = cursor.fetchall()
+    cu = db.cursor()
+    cu.execute("SELECT * FROM states WHERE name = 'N%' ORDER BY states.id ASC")
+    result = cu.fetchall()
 
     for row in result:
         print(row)
