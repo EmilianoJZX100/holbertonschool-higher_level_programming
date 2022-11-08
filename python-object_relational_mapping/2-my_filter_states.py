@@ -14,7 +14,8 @@ if __name__ == "__main__":
         )
 
     c = db.cursor()
-    c.execute("SELECT * FROM states WHERE name LIKE '{}' ORDER BY states.id".format(argv[4]))
+    c.execute("SELECT * FROM states WHERE name LIKE '{}' \
+        ORDER BY states.id".format(argv[4]))
     result = c.fetchall()
 
     for row in result:
