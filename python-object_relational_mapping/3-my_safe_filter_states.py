@@ -14,7 +14,7 @@ if __name__ == "__main__":
         )
 
     c = db.cursor()
-    c.execute("SELECT * FROM states WHERE name LIKE %{}s \
+    c.execute("SELECT * FROM states WHERE name LIKE %({})s \
         ORDER BY states.id".format(argv[4]))
     result = c.fetchall()
 
