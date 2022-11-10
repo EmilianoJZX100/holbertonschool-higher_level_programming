@@ -18,6 +18,8 @@ if __name__ == "__main__":
          AND states.name = %s ORDER BY cities.id ASC", (argv[4], ))
     result = c.fetchall()
 
-    for row in result:
-        if row[1] == argv[4]:
-            print(row)
+    for row, city in enumerate(result):
+        if row > 0:
+            print(', ', end='')
+        print(str(city[0]), end='')
+    print()
